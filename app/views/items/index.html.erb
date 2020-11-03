@@ -3,8 +3,7 @@
 <div class="container">
 <% @items.each do |item| %>
     <div class="item">
-    <h3><strong><%= item.name%></strong></h3>
-    <p><%= item.description%></p>
+    <h3><strong><%= item.name%></strong></h3>    
     <p><%= "$#{item.price}"%></p>
     <p><%= item.location%></p>
     <%= link_to "visit this item", item_path(item.id), class:"link"%>
