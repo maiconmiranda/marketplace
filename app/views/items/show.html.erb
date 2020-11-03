@@ -2,8 +2,9 @@
 
 <h2><%= @item.name%></h2>
 <h2><%= @item.description%></h2>
-<h2><%= "$#{@item.price}"%></h2>
-<h2><%= @item.location%></h2>
 <%=image_tag @item.picture if @item.picture.attached?%>
+<%=link_to "back to items", items_path, class:'link'%>
 
-<h3>What would you like to do with this item?></h3>
+
+
+

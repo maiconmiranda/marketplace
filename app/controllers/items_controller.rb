@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-    before_action :authenticate_user!, only: [:new, :create, :destroy]
+    before_action :authenticate_user!, only: [:new, :create, :destroy, :update, :edit]
 
     def home
     end
@@ -26,7 +26,23 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])    
       @item.destroy    
       redirect_to items_path
-    end   
+    end
+
+    def edit
+        @item = Item.find(params[:id])
+    end
+    
+    def update
+        @item = Item.find(params[:id])
+        @item.update(item_params)
+        redirect_to items_path      
+    end
+
+    def selected
+        @items = []
+        item = Item.find(params[:id])
+        @items.push(item)
+    end
    
 
     private

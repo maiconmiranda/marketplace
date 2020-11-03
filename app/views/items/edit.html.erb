@@ -1,0 +1,17 @@
+<h1>Update Items Information</h1>
+
+<%= form_for @item, local: true, class: "new_items" do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br><br>
+  <%= f.label :description %><br>
+  <%= f.text_area :description, size: "60x12" %><br><br>
+  <%= f.label :price %><br>
+  <%= f.text_field :price %><br><br>
+  <%= f.label :location %><br>
+  <%= f.text_field :location %><br><br>
+  <%= f.label :picture %><br>
+  <%= f.file_field :picture %><br><br>
+  <%= f.submit "create"%> <br><br>
+  <%=link_to "Disregard Changes", items_path, class:'link'%> 
+  
+<% end %>

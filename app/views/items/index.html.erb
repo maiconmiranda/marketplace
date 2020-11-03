@@ -1,12 +1,23 @@
 <h1>These are the available items for sale</h1>
- <%= link_to "Add more items", new_item_path%>
+
+ <%= link_to "sell items", new_item_path, class:'link'%>
+ <%= link_to "sign out", destroy_user_session_path, class:'link', method: :delete%>
+ 
+
 <div class="container">
 <% @items.each do |item| %>
     <div class="item">
     <h3><strong><%= item.name%></strong></h3>    
     <p><%= "$#{item.price}"%></p>
     <p><%= item.location%></p>
-    <%= link_to "visit this item", item_path(item.id), class:"link"%>
+    
+    <% if current_user.items.include?(item)%>
+        <%= link_to "Remove", item_path(item.id), method: :delete, class:"link"%>
+         <%= link_to "update", edit_item_path(item.id), class:"link"%>
+    <%else%>
+        <%= link_to "View this item", item_path(item.id), class:"link"%>
+        <%= link_to "Buy", selected_item_path(item.id), class:"link"%>
+    <%end%>
     </div>
 <%end%>
 </div>
