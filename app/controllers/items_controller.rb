@@ -16,8 +16,9 @@ class ItemsController < ApplicationController
       @item = Item.new
     end
   
-    def create       
-      current_user.items.create(item_params)       
+    def create
+        current_user.items.create(item_params)       
+             
       redirect_to items_path
     end
   

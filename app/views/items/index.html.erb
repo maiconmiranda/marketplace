@@ -1,0 +1,13 @@
+<h1>These are the available items for sale</h1>
+ <%= link_to "Add more items", new_item_path%>
+<div class="container">
+<% @items.each do |item| %>
+    <div class="item">
+    <h3><strong><%= item.name%></strong></h3>
+    <p><%= item.description%></p>
+    <p><%= "$#{item.price}"%></p>
+    <p><%= item.location%></p>
+    <%= link_to "visit this item", item_path(item.id), class:"link"%>
+    </div>
+<%end%>
+</div>
