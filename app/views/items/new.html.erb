@@ -1,6 +1,7 @@
-<h1>Generate New Items Here!</h1>
+<div class='general-form'>
+  <h1>Generate New Items Here!</h1>
 
-<%= form_with model: @item, local: true, class: "new_items" do |f| %>
+  <%= form_with model: @item, local: true, class: "new_items" do |f| %>
   <%= f.label :name %><br>
   <%= f.text_field :name %><br><br>
   <%= f.label :description %><br>
@@ -12,5 +13,6 @@
   <%= f.label :picture %><br>
   <%= f.file_field :picture %><br><br>
   <%= f.submit "create"%>
-  
-<% end %>
+
+  <% end %>
+</div>

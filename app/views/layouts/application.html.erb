@@ -26,7 +26,7 @@
 
       <%= link_to "Home", items_path%>
       <%= link_to "Sell your items", new_item_path%>
-      <%= link_to "Buy Items", new_user_session_path%>
+      <%= link_to "Buy Items", items_path%>
       <%= link_to "Sign out", destroy_user_session_path, method: :delete%>
       <% else %>
 
@@ -46,6 +46,8 @@
   </div>
 </body>
 
-
+<footer>
+  <p>The Dealers store, all rights reserved</p>
+</footer>
 
 </html>

@@ -1,4 +1,6 @@
 html {
+  position: relative;
+  min-height: 100vh;
   margin-left: 15%;
   margin-right: 15%;
 }
@@ -119,4 +121,105 @@ h3 {
 }
 .alert p {
   background: #DFE0E0;
+}
+
+footer {
+   position: absolute;
+    bottom: 0;
+    background-color: #003459;
+    color: white;
+    text-align: center;
+    width: 835px;
+    margin-left: 177px;
+  p {
+    text-align: center;
+    padding-top: 15px;
+    color: antiquewhite;
+    font-family: 'Itim';
+  }
+}
+
+.null {
+  height: 115px;
+}
+
+.show_item {
+  background: #F7C1AA;
+  margin: 0;
+  height: 100vh;
+  display: inline-block;
+  margin-left: 270px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+
+.description_show {
+  text-align: center;
+    margin: 0;
+    padding-top: 50px;
+  h2 {
+    font-size: 40px;
+    text-transform: capitalize;
+    font-family: 'Itim';
+    color: #003459;
+  }
+}
+
+.patch {
+  display: inline-flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+  align-items: center;
+    margin-left: 74px;
+    margin-top: 50px;
+}
+
+
+.patch-1 {
+  font-size: 30px;
+  background: #00a8e8;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+.patch-1 a {
+  color: white;
+
+}
+
+.patch-1:hover {
+  background-color: #2D3142;
+}
+
+.general-form {
+  background: #003459;
+    width: 620px;
+    height: 550px;
+    margin-left: 273px;
+    padding: 50px;
+    
+  h1 {
+    font-family: 'Roboto';
+    color: #fb8f67;
+    margin-bottom: 20px;
+  }
+  label {
+    font-family: 'Roboto';
+    color: antiquewhite;
+  }
+  input[type="submit" i] {
+    background: #F7C1AA;
+    font-size: 19px;
+    font-family: 'Itim';
+  }
+}
+
+.link-desregard {
+  background: #DFE0E0;
+  font-family: 'Roboto';
+  font-size: 17px;
+  border-radius: 5px;
+  color: #2D3142;
+  padding: 4px;
 }
