@@ -1,3 +1,19 @@
+<div class="content_ab">
+  <h3>Became a Dealer</h3>
+  <article class="about">
+    <div class='image'>
+      <%=  image_tag "flaticon/pay.png", class: "img_ab" %>
+    </div>
+    <div class='text_ab'>
+      <p>Once a Dealer you can sell and buy anything as well negotiate prices, deals and other details with other Dealers. </p>
+      <p>Don't stay behind, sign up and master on the art of dealing. </p>
+    </div>
+    <div class="ab_sign">
+      <%= link_to "Sign up", new_user_registration_path%>
+    </div>
+  </article>
+</div>
+
 <div class="container">
   <% @items.each do |item| %>
   <div class="item">

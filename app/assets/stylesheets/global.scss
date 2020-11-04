@@ -1,6 +1,6 @@
-.body-container {
-  margin-left: 10%;
-  margin-right: 10%;
+html {
+  margin-left: 15%;
+  margin-right: 15%;
 }
 .web_title {
   margin: auto;
@@ -42,4 +42,81 @@
 
 .icon {
   height: 50px;
+}
+
+.content_ab {
+  background: #DFE0E0;
+  margin: 0;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+h3 {
+  margin: 0;
+  padding-top: 30px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 25px;
+    color: #002642;
+  }
+
+  .about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+  }
+
+.image {
+  margin-left: 40px;
+  margin-right: 20px;
+  .img_ab {
+    height: 150px;
+  width: 150px;
+  object-fit: cover;
+  }
+}
+
+.text_ab {
+  text-align: center;
+  font-family: 'Roboto';
+  box-sizing: border-box;
+  font-size: 27px;
+    text-align: center;
+    padding-left: 110px;
+    padding-right: 85px;
+  p {
+    box-sizing: border-box;
+  }
+}
+
+.ab_sign {
+  margin: 5px;
+  margin-right: 35px;
+    padding-left: 21px;
+    padding-right: 19px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 336px;
+    text-align: center;
+    background: #00a8e8;
+    border-radius: 5px;
+    a {
+      text-decoration: none;
+      font-family: 'Maven Pro', sans-serif;
+      font-size: 25px;
+      color: white;
+    }
+}
+
+.ab_sign:hover {
+  background-color: #F7C1AA;
+  color: black;
+}
+
+.notice p {
+  background: #DFE0E0;
+}
+.alert p {
+  background: #DFE0E0;
 }
