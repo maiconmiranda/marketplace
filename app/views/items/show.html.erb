@@ -1,5 +1,5 @@
 <div class="show_item">
-  <% if user_signed_in?%>
+  <% if current_user.items.include?(@item)%>
   <div class="description_show">
     <h2><%= @item.name%></h2>
     <h2><%= @item.description%></h2>
@@ -23,7 +23,10 @@
     <h2><%= @item.description%></h2>
     <%=image_tag @item.picture, class: 'img_show' if @item.picture.attached?%>
   </div>
-  <%=link_to "back to items", items_path, class:'link-desregard'%>
+  <div class='back-button'>
+    <%=link_to "back to items", items_path, class:'link-desregard'%>
+  </div>
   <%end%>
 
 </div>
+<div class='null'></div>

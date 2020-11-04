@@ -140,7 +140,7 @@ footer {
 }
 
 .null {
-  height: 115px;
+  height: 200px;
 }
 
 .show_item {
@@ -151,6 +151,7 @@ footer {
   margin-left: 270px;
   padding-left: 60px;
   padding-right: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -158,6 +159,7 @@ footer {
   text-align: center;
     margin: 0;
     padding-top: 50px;
+    padding-bottom: 30px;
   h2 {
     font-size: 40px;
     text-transform: capitalize;
@@ -165,6 +167,7 @@ footer {
     color: #003459;
   }
 }
+
 
 .patch {
   display: inline-flex;
@@ -191,12 +194,19 @@ footer {
 .patch-1:hover {
   background-color: #2D3142;
 }
+.back-button {
+  margin-left: 175px;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
+}
 
 .general-form {
   background: #003459;
     width: 620px;
     height: 550px;
-    margin-left: 273px;
+    margin-left: 231px;
     padding: 50px;
     
   h1 {

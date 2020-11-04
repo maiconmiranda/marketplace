@@ -14,13 +14,12 @@ class ItemsController < ApplicationController
     end
   
     def create
-        current_user.items.create(item_params)       
-             
+      current_user.items.create(item_params)       
       redirect_to items_path
     end
   
     def destroy
-      @item = Item.find(params[:id])    
+      @item = Item.find(params[:id]) 
       @item.destroy    
       redirect_to items_path
     end

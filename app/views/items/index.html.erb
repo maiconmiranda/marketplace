@@ -14,8 +14,10 @@
   </article>
 </div>
 
+
 <div class="container">
   <% @items.each do |item| %>
+  <%= link_to(item_path(item.id)) do %>
   <div class="item">
     <%= image_tag item.picture, class:'img' if item.picture.attached? %>
     <%= link_to item.name, item_path(item.id), class:"link_name"%>
@@ -26,5 +28,7 @@
     </div>
   </div>
   <%end%>
+  <%end%>
 </div>
+
 <div class='null'></div>
