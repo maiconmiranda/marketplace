@@ -1,9 +1,6 @@
 class ItemsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :destroy, :update, :edit]
 
-    def home
-    end
-  
     def index
       @items = Item.all 
     end

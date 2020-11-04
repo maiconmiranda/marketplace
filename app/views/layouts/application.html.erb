@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Marketplace</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>Marketplace</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@900&display=swap" rel="stylesheet">
+<!-- end Google fonts -->
+
+<body>
+  <header class="web_title">
+    <h1> The Dealers Store </h1>
+  </header>
+  <div class="body-container">
+    <nav class="navbar">
+      <% if user_signed_in?%>
+
+      <%= link_to "Home", items_path%>
+      <%= link_to "Sell your items", new_item_path%>
+      <%= link_to "Buy Items", new_user_session_path%>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete%>
+      <% else %>
+
+      <%= link_to "Home", items_path%>
+      <%= link_to "Sign in", new_user_session_path%>
+      <%= link_to "Sign up", new_user_registration_path%>
+      <%= link_to "Sell items", new_user_session_path%>
+      <%= link_to "Buy Items", new_user_session_path%>
+
+      <% end %>
+    </nav>
+    <article class="about">
+
+    </article>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
-  </body>
+  </div>
+</body>
+
 </html>

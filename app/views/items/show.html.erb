@@ -1,10 +1,21 @@
 <h3>You have chosen to see this item</h2>
 
-<h2><%= @item.name%></h2>
-<h2><%= @item.description%></h2>
-<%=image_tag @item.picture if @item.picture.attached?%>
-<%=link_to "back to items", items_path, class:'link'%>
+  <% if user_signed_in?%>
+  <h2><%= @item.name%></h2>
+  <h2><%= @item.description%></h2>
+  <%=image_tag @item.picture, class: 'img_show' if @item.picture.attached?%>
+  <div class='patch'>
+    <div class='patch-1'>
+      <%= link_to "Remove", item_path(@item.id), method: :delete, class:"link"%>
+    </div>
+    <div class='patch-1'>
+      <%= link_to "Update", edit_item_path(@item.id), class:"link"%>
+    </div>
+  </div>
+  <% else %>
+  <h2><%= @item.name%></h2>
+  <h2><%= @item.description%></h2>
+  <%=image_tag @item.picture, class: 'img_show' if @item.picture.attached?%>
+  <%end%>
 
-
-
-
+  <%=link_to "back to items", items_path, class:'link'%>

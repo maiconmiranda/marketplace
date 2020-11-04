@@ -1,9 +1,0 @@
-<h1>This is the Home Page</h1>
-
-<% if user_signed_in?%>   
-    <%= link_to "See all items", items_path, class:'link'%>
-    <%= link_to "sign out", destroy_user_session_path, class:'link', method: :delete%>
-<% else %>
-    <p><%= link_to "sign in", new_user_session_path, class:'link'%><br></p>
-    <%= link_to "sign up", new_user_registration_path, class:'link'%>
-<% end %>
