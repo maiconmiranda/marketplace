@@ -1,5 +1,5 @@
 <div class="show_item">
-  <% if current_user.items.include?(@item)%>
+  <% if user_signed_in? && current_user.items.include?(@item)%>
   <div class="description_show">
     <h2><%= @item.name%></h2>
     <h2><%= @item.description%></h2>
